@@ -19,7 +19,7 @@
 <body>
 	<div id="mainDiv">
 		<div id="content">
-			<audio autoplay="autoplay" height="100" width="100">
+			<audio id="audio_mp3" autoplay="autoplay" height="100" width="100">
 				<source src="renxi.mp3" type="audio/mp3" />
 				<embed height="100" width="100" src="renxi.mp3" />
 			</audio>
@@ -45,10 +45,12 @@
 					<div id="loveu">
 						from<br/>
 						<div class="signature">一个没得形象的人</div>
-
+					</div>
 				</div>
 			</div>
-</div>
+
+		</div>
+	</div>
 	<div class="bg1">	
 		<div class="main">
 			<footer style="line-height:20px">
@@ -58,10 +60,9 @@
                     <a href="" target="_blank"></a></p>
 
                 </div>
+			</footer>
 		</div>
 	</div>
-</div>
-
 	<script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
@@ -96,9 +97,18 @@
 			adjustCodePosition();
 			$("#code").typewriter();
 		}
-	</script>
-    <audio id="bgmMusic" src="renxi.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
 
+		var myAuto = document.getElementById('audio_mp3');
+                  	  myAuto.play();
+
+	</script>
+<!--
+
+
+
+	<audio id="bgmMusic" src="renxi.mp3" preload="auto" type="audio/mp3" autoplay="autoplay" loop hidden="true"></audio>
+
+-->
 
 
 </body>
